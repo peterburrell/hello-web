@@ -1,37 +1,136 @@
 ﻿body {
-    padding-top: 50px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto', sans-serif;
     padding-bottom: 20px;
 }
 
+
 /* Wrapping element */
+
+
 /* Set some basic padding to keep content from hitting the edges */
+
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
+
 /* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
+
+input, select, textarea {
     max-width: 280px;
 }
 
+
 /* Carousel */
+.carousel {
+    height: 400px;
+    margin-bottom: 60px;
+}
+
+.carousel-inner .item {
+    background-size: 100px; 
+    width:100%; 
+    height:400px;
+}
+
+.carousel-caption {
+    text-shadow: none;
+}
+
 .carousel-caption p {
     font-size: 20px;
     line-height: 1.4;
 }
 
+.carousel-caption h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.carousel-control.right {
+    background-image: none;
+}
+.carousel-control.left {
+    background-image: none;
+}
+
 /* Make .svg files in the carousel display properly in older browsers */
+
 .carousel-inner .item img[src$=".svg"] {
     width: 100%;
 }
 
+.carousel-indicators li {
+    border-radius: 0;
+}
+
 /* Hide/rearrange for smaller screens */
+
 @media screen and (max-width: 767px) {
     /* Hide captions */
     .carousel-caption {
         display: none;
     }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+.navbar-absolute-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+#app-header.navbar-default .navbar-brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(256, 256, 256, 1);
+    text-transform: uppercase;
+}
+
+#app-header.navbar-default {
+    font-size: 18px;
+    background-color: rgba(200, 200, 200, .2);
+    border-width: 0;
+    border-radius: 0;
+    /*box-shadow: 0 2px 8px -1px rgba(0,0,0,0.25)*/
+}
+
+#app-header.navbar-default .navbar-nav > li > a {
+    color: rgba(256, 256, 256, 1);
+    background-color: rgba(248, 248, 248, 0);
+    text-transform: uppercase;
+}
+
+#app-header.navbar-default .navbar-nav > li > a:hover, #app-header.navbar-default .navbar-nav > li > a:focus {
+    color: rgba(256, 256, 256, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+
+#app-header.navbar-default .navbar-nav > .active > a, #app-header.navbar-default .navbar-nav > .active > a:hover, #app-header.navbar-default .navbar-nav > .active > a:focus {
+    color: rgba(256, 256, 256, 1);
+    background-color: rgba(231, 231, 231, 1);
+}
+
+#app-header.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+
+#app-header.navbar-default .navbar-toggle:hover, #app-header.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+#app-header.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+#app-header.navbar-default .navbar-toggle:hover .icon-bar, #app-header.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #888;
 }

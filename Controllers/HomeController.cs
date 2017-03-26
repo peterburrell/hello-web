@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace hello_web.Controllers
@@ -10,21 +7,23 @@ namespace hello_web.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.Title = "Home";
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            var about = new {
+                now = DateTime.UtcNow,
+                message = "I like 🍩s!"
+            };
 
-            return View();
+            return Json(about);
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            return Content("this is a contact page");
         }
 
         public IActionResult Error()
